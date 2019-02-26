@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "C:\\Users\\Jack\\.virtualenvs\\flask-web-samples-5Cut0LKj\\Scripts\\python.exe",
+    "editor.detectIndentation": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "[python]": {
+        "editor.rulers": [
+            80,
+            120
+        ]
+    },
+}

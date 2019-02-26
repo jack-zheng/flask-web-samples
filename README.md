@@ -1,4 +1,9 @@
 # Flask-Web-Samples
+This repo is basically for practicing python code when reading flask related guide book.
+
+The books I refered:
+
+* Flask Web 实战 - 李辉
 
 ## Env Setup Tips
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ user.uername }}'s Watchlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <a href="{{ url_for('index') }}">&larr; Return</a>
+
+    {# self defined filter to add icon #}
+
+    <h2>{{ user.username | musical}}</h2>
+    <img src="{{ url_for('static', filename='jack.jpg') }}" width="50">
+    {% if user.bio %}
+        <i>{{ user.bio }}</i>
+    {% else %}
+        <i>This user has not provided a bio.</i>
+    {% endif %}
+    <h5>{{ user.username }}'s Watchlist ({{ movies|length }}): </h5>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.name }} - {{ movie.year }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Print foo value: {{ foo }}</h4>
+    {% filter upper %}
+        filter to upper case text
+    {% endfilter %}
+
+    {% set navigation %}
+        <li>
+            <a >Home</a>
+            <a >About</a>
+        </li>
+    {% endset %}
+
+</body>
+</html>

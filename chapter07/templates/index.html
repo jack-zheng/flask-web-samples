@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ moment.include_jquery() }}
+{{ moment.include_moment() }}
+{{ moment.lang("zh-CN") }} 
+{% endblock %}
+{% block content %}
+<h2>Time Testing</h2>
+<h1>Time{{ moment(time).format('YYYY年M月D日, h:mm:ss a') }}</h1>
+<h1> Time: {{ moment(time).fromNow() }}</h1>
+<h1> Calendar: {{ moment(time).calendar() }}</h1>
+<h1> value of: {{ moment(time).valueOf() }}</h1>
+<h1>None in timestamp: {{ moment().format('MMMM Do YYYY, h:mm:ss a')  }} </h1>
+<h1>Unix: {{ moment(timestamp=None, local=False).unix() }}</h1>
+{% endblock %}

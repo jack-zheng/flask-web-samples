@@ -16,6 +16,8 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-mail = "*"
 sendgrid = "*"
+flask-moment = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"
